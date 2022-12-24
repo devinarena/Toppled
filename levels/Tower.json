@@ -8,7 +8,7 @@
 		"three_star": 30,
 		"tool": {
 			"type": "baseball",
-			"quantity": 3
+			"quantity": 2
 		}
 	},
 	"blocks": [
@@ -70,6 +70,34 @@
 			"position": {
 				"x": 0,
 				"y": 5,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			}
+		},
+		{
+			"type": "points",
+			"value": 10,
+			"position": {
+				"x": 0,
+				"y": 6,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			}
+		},
+		{
+			"type": "points",
+			"value": 10,
+			"position": {
+				"x": 0,
+				"y": 7,
 				"z": 0
 			},
 			"scale": {

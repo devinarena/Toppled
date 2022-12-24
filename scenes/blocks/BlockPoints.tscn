@@ -21,6 +21,7 @@ material = SubResource( 1 )
 size = Vector3( 1.05, 1.05, 1.05 )
 
 [node name="BlockPoints" instance=ExtResource( 1 )]
+contacts_reported = 5
 contact_monitor = true
 script = ExtResource( 2 )
 

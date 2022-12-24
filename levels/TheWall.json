@@ -1,0 +1,146 @@
+{
+  "name": "The Wall",
+  "author": "Devin Arena",
+  "rules": {
+    "type": "points",
+    "one_star": 20,
+    "two_star": 40,
+    "three_star": 50,
+    "tool": {
+      "type": "baseball",
+      "quantity": 3
+    }
+  },
+  "blocks": [
+    {
+      "position": { "x": 0, "y": 1, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 1, "y": 1, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 2, "y": 1, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": -1, "y": 1, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": -2, "y": 1, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": -2, "y": 2, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": -1, "y": 2, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 0, "y": 2, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 1, "y": 2, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 2, "y": 2, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 2, "y": 3, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 0, "y": 3, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 1, "y": 3, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": -1, "y": 3, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": -2, "y": 3, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": -2, "y": 4, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": -1, "y": 4, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 1, "y": 4, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 0, "y": 4, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 2, "y": 4, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 2, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 1, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 0, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -1, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -2, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    }
+  ]
+}

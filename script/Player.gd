@@ -8,24 +8,33 @@ var drag_origin: Vector2
 var level: Node
 var zoom: float = DEFAULT_ZOOM
 
+signal tool_used
+
+
 func _ready():
 	level = get_parent()
-	scope = level.get_node("GUI/Scope")
+	scope = level.get_node("GUI/Control/Scope")
 
 	$Camera.global_transform.origin = Vector3(0, DEFAULT_ZOOM, DEFAULT_ZOOM)
 	Swipe.connect("swipe", self, "_on_swipe")
 
 
 func use_tool(strength: float) -> void:
-	var bb = load("res://scenes/tools/Baseball.tscn").instance()
+	if level.tool_uses == 0:
+		return
+
+	level.tool_uses -= 1
+
+	var t = load(Tools.TOOLS[level.topple_tool].scene).instance()
 
 	var vscale = zoom / DEFAULT_ZOOM
 
-	bb.initial_velocity = $Camera.project_ray_normal(scope.position).normalized() * vscale * strength
-	print(bb.initial_velocity)
+	t.initial_velocity = $Camera.project_ray_normal(scope.position).normalized() * vscale * strength
 
-	level.get_node("Projectiles").add_child(bb)
-	bb.global_transform.origin = $Camera.global_transform.origin
+	level.get_node("Projectiles").add_child(t)
+	t.global_transform.origin = $Camera.global_transform.origin
+
+	emit_signal("tool_used")
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -35,13 +44,14 @@ func _unhandled_input(event: InputEvent) -> void:
 				drag_origin = event.global_position
 			else:
 				drag_origin = Vector2.ZERO
-	
+
 	if event is InputEventMouseMotion:
 		if level.selected_tool == "Move":
 			if drag_origin:
 				var delta = event.global_position.x - drag_origin.x
 				drag_origin = event.global_position
-				rotate_y(delta * 0.01)
+				rotate_y(-delta * 0.01)
+
 
 func _on_swipe(end_position: Vector2, strength: float) -> void:
 	if level.selected_tool == "Tool":
