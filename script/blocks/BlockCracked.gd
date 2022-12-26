@@ -6,6 +6,8 @@ var dead = false
 func pop() -> void:
 	dead = true
 
+func explode() -> void:
+	pop()
 
 func _physics_process(delta):
 	if dead:

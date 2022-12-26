@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/blocks/Block.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://script/MainMenu.gd" type="Script" id=5]
 [ext_resource path="res://scenes/blocks/BlockPoints.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/LevelEnvironment.tres" type="Environment" id=7]
+[ext_resource path="res://assets/Font32.tres" type="DynamicFont" id=8]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource( 5 )
@@ -74,7 +75,7 @@ anchor_top = 0.0666667
 anchor_right = 1.0
 anchor_bottom = 0.177778
 margin_top = -3.8147e-06
-custom_colors/font_color = Color( 0, 0.929412, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "Toppled"
 align = 1
@@ -83,21 +84,29 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 anchor_left = 0.0833333
 anchor_top = 0.355556
 anchor_right = 0.916667
 anchor_bottom = 0.888889
-scroll_horizontal_enabled = false
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+[node name="PointsMode" type="Button" parent="Control/VBoxContainer"]
 margin_right = 320.0
-margin_bottom = 384.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": true
-}
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 8 )
+text = "Points"
+
+[node name="Diamonds" type="Button" parent="Control/VBoxContainer"]
+margin_top = 54.0
+margin_right = 320.0
+margin_bottom = 92.0
+custom_fonts/font = ExtResource( 8 )
+text = "Diamonds"
+
+[connection signal="pressed" from="Control/VBoxContainer/PointsMode" to="." method="_on_PointsMode_pressed"]

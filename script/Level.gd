@@ -26,13 +26,15 @@ func _ready():
 
 	$Player.connect("tool_used", self, "_on_Tool_used")
 
-	if Globals.level == "Launched":
+	var target = ""
+
+	if Globals.level == target:
 		var l = load("res://scenes/LevelGenerator.tscn").instance()
 		add_child(l)
 		var new_blocks = l.serialize().blocks
 
 		var file = File.new()
-		file.open("res://levels/Launched.json", File.READ)
+		file.open("res://levels/%s.json" % target, File.READ)
 		var level_str = file.get_as_text()
 		file.close()
 
@@ -40,7 +42,7 @@ func _ready():
 		print(json)
 		json.blocks = new_blocks
 		
-		file.open("res://levels/Launched.json", File.WRITE)
+		file.open("res://levels/%s.json" % target, File.WRITE)
 		file.store_string(to_json(json))
 		file.close()
 
@@ -107,6 +109,9 @@ func show_popup(title: String, desc: String) -> void:
 	$GUI/Control/Dialog/CenterContainer/VBoxContainer/Description.text = desc
 	$GUI/Control/Dialog.show()
 
+
+func get_blocks() -> Array:
+	return $Blocks.get_children()
 
 # CALLBACKS
 

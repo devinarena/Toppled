@@ -19,6 +19,8 @@ func _physics_process(delta):
 		# apply gravity
 		apply_central_impulse(Vector3(0, -0.001, 0))
 
+func explode() -> void:
+	pass
 
 func scale(amt: Vector3) -> void:
 	$Mesh.mesh = $Mesh.mesh.duplicate()

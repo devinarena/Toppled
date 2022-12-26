@@ -1,0 +1,238 @@
+{
+  "author": "Devin Arena",
+  "name": "Scattershot",
+  "rules": {
+    "type": "points",
+    "one_star": 100,
+    "two_star": 250,
+    "three_star": 360,
+    "tool": { "quantity": 1, "type": "bomb" }
+  },
+  "default_zoom": {
+    "y": 16.0,
+    "z": 14.0
+  },
+  "blocks": [
+    {
+      "position": { "x": 0, "y": 5, "z": 0 },
+      "scale": { "x": 10, "y": 1, "z": 10 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 0.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 1.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 2.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 3.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": 3.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": 2.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": 1.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": 0.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": -0.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": -1.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": -2.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": -3.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 4.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 3.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 2.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 1.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 0.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -0.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -1.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -2.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -3.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": -4.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": -3.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": -2.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": -1.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": -0.6 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": 0.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": 1.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": 2.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": 3.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -0.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -1.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -2.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -3.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4.5, "y": 6, "z": 4.4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    }
+  ]
+}

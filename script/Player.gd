@@ -3,7 +3,7 @@ extends Spatial
 const DEFAULT_ZOOM = 8.0
 
 const MIN_ZOOM: float = 5.0
-var MAX_ZOOM: float = 30.0
+var MAX_ZOOM: float = 25.0
 
 var scope: Node
 var drag_origin: Vector2
@@ -31,7 +31,7 @@ func reset_camera_position() -> void:
 
 func set_camera_position(y: float, z: float) -> void:
 	original_z = z
-	MAX_ZOOM = z * 6
+	MAX_ZOOM = z * 5
 	$Camera.global_transform.origin = Vector3(0, y, z)
 
 

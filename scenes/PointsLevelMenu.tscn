@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Font48.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/blocks/BlockImmovable.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/blocks/BlockPoints.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/LevelEnvironment.tres" type="Environment" id=5]
+[ext_resource path="res://assets/Theme.tres" type="Theme" id=6]
+[ext_resource path="res://assets/Font32.tres" type="DynamicFont" id=7]
+[ext_resource path="res://script/PointsLevelMenu.gd" type="Script" id=8]
+
+[node name="PointsLevelMenu" type="Node"]
+script = ExtResource( 8 )
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Ground" parent="Background" instance=ExtResource( 3 )]
+
+[node name="BlockImmovable" parent="Background" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="BlockPoints" parent="Background" instance=ExtResource( 4 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 4.5, 0 )
+value = 10
+
+[node name="CameraAnchor" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="CameraAnchor"]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 8, 13 )
+environment = ExtResource( 5 )
+current = true
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelName" type="Label" parent="Control"]
+anchor_top = 0.0666667
+anchor_right = 1.0
+anchor_bottom = 0.177778
+margin_top = -3.8147e-06
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Toppled"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+anchor_top = 0.911111
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 16
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BackButton" type="Button" parent="Control/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+custom_fonts/font = ExtResource( 1 )
+text = "<"
+
+[node name="PlayButton" type="Button" parent="Control/HBoxContainer"]
+margin_left = 80.0
+margin_right = 304.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 7 )
+text = "Play"
+
+[node name="NextButton" type="Button" parent="Control/HBoxContainer"]
+margin_left = 320.0
+margin_right = 384.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+custom_fonts/font = ExtResource( 1 )
+text = ">"
+
+[connection signal="pressed" from="Control/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/NextButton" to="." method="_on_NextButton_pressed"]

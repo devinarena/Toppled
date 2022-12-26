@@ -8,6 +8,10 @@ const TOOLS = {
     "bowlingball": {
         "scene": "res://scenes/tools/BowlingBall.tscn",
         "icon": "res://assets/tools/bowling_ball.png",
+    },
+    "bomb": {
+        "scene": "res://scenes/tools/Bomb.tscn",
+        "icon": "res://assets/tools/bomb.png",
     }
 }
 

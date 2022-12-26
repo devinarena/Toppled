@@ -7,8 +7,8 @@
     "two_star": 100,
     "three_star": 135,
     "tool": {
-      "type": "bowlingball",
-      "quantity": 7
+      "type": "bomb",
+      "quantity": 2
     }
   },
   "blocks": [
