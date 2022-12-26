@@ -1,7 +1,7 @@
 extends "res://script/ToppleTool.gd"
 
 const EXPLOSION_RADIUS: float = 96.0
-const EXPLOSION_FORCE: float = 0.0004
+const EXPLOSION_FORCE: float = 0.00055
 
 
 func explode() -> void:

@@ -3,39 +3,10 @@ extends Node
 const s_level = "res://scenes/Level.tscn"
 
 var level_idx: int = 0
-var levels: Array = []
 var timer: float = 0.0
 
-var level_stats = {
-	"DoubleStack":
-	{
-		"total_blocks": 8,
-		"point_blocks": 2,
-		"block_mass": 144,
-		"tool": {"type": "bowlingball", "quantity": 4}
-	},
-	"Floating":
-	{
-		"total_blocks": 10,
-		"point_blocks": 5,
-		"block_mass": 10,
-		"tool": {"type": "baseball", "quantity": 5}
-	},
-	"Floodgate":
-	{
-		"total_blocks": 11,
-		"point_blocks": 6,
-		"block_mass": 379,
-		"tool": {"type": "baseball", "quantity": 1}
-	},
-	"Insides":
-	{
-		"total_blocks": 125,
-		"point_blocks": 27,
-		"block_mass": 125,
-		"tool": {"type": "bomb", "quantity": 2}
-	},
-}
+var level_list: Array = []
+var level_stats = {}
 
 
 func load_levels() -> void:
@@ -58,19 +29,49 @@ func load_levels() -> void:
 					lname += c
 				first = false
 
-			levels.push_back([lname, level])
+			var file = File.new()
+			var path = "res://levels/%s.json" % level
+			if file.open(path, File.READ) == OK:
+				var data = parse_json(file.get_as_text())
+				file.close()
+
+				var stats = {
+					"level": level,
+					"total_blocks": 0,
+					"point_blocks": 0,
+					"block_mass": 0,
+					"tool":
+					{
+						"type": "none",
+						"quantity": 0,
+					},
+				}
+
+				for block in data.blocks:
+					stats.total_blocks += 1
+					stats.block_mass += (block.scale.x * block.scale.y * block.scale.z)
+
+					if block.type == "points":
+						stats.point_blocks += 1
+
+				if data.rules["tool"]:
+					stats["tool"].type = data.rules["tool"].type
+					stats["tool"].quantity = data.rules["tool"].quantity
+
+				level_stats[lname] = stats
+				if data.id > level_list.size():
+					level_list.append(lname)
+				else:
+					level_list.insert(data.id, lname)
 
 			level = dir.get_next()
 
 
 func setup_gui() -> void:
-	var level = levels[level_idx]
-	$Control/LevelName.text = level[0]
+	var level = level_list[level_idx]
+	$Control/LevelName.text = level
 
-	if not level[1] in level_stats:
-		return
-
-	var stats = level_stats[level[1]]
+	var stats = level_stats[level]
 
 	$Control/LevelStats/TotalBlocks.bbcode_text = (
 		"[img=32x32]res://assets/blocks/normal.png[/img]x%s blocks"
@@ -88,6 +89,14 @@ func setup_gui() -> void:
 		"[img=32x32]%s[/img]x%s uses"
 		% [Tools.TOOLS[stats["tool"].type].icon, stats["tool"].quantity]
 	)
+
+	var stars = randi() % 4
+	for i in range(stars):
+		$Control/StarContainer.get_node("Star%sEmpty" % (i + 1)).hide()
+		$Control/StarContainer.get_node("Star%sFilled" % (i + 1)).show()
+	for i in range(stars, 3):
+		$Control/StarContainer.get_node("Star%sFilled" % (i + 1)).hide()
+		$Control/StarContainer.get_node("Star%sEmpty" % (i + 1)).show()
 
 
 func _ready():
@@ -108,7 +117,7 @@ func _on_BackButton_pressed() -> void:
 
 
 func _on_NextButton_pressed() -> void:
-	if level_idx == levels.size() - 1:
+	if level_idx == level_list.size() - 1:
 		return
 
 	level_idx += 1
@@ -116,6 +125,6 @@ func _on_NextButton_pressed() -> void:
 
 
 func _on_PlayButton_pressed() -> void:
-	Globals.level = levels[level_idx][1]
+	Globals.level = level_stats[level_list[level_idx]].level
 	get_tree().change_scene(s_level)
 	print("Loading level: " + Globals.level)
