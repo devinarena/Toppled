@@ -1,0 +1,81 @@
+{
+  "name": "Floodgate",
+  "author": "Devin Arena",
+  "rules": {
+    "type": "points",
+    "one_star": 10,
+    "two_star": 30,
+    "three_star": 45,
+    "tool": {
+      "type": "baseball",
+      "quantity": 1
+    }
+  },
+  "default_zoom": {
+    "y": 10.0,
+    "z": 14.0
+  },
+  "blocks": [
+    {
+      "position": { "x": 4, "y": 4, "z": -4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": -4, "y": 4, "z": -4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 4, "y": 4, "z": 4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": -4, "y": 4, "z": 4 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 0, "y": 5, "z": 0 },
+      "scale": { "x": 9, "y": 1, "z": 9 },
+      "type": "cracked"
+    },
+    {
+      "position": { "x": 0, "y": 6, "z": 0 },
+      "scale": { "x": 7, "y": 1, "z": 7 },
+      "type": "points",
+      "value": 5
+    },
+    {
+      "position": { "x": 0, "y": 7, "z": 0 },
+      "scale": { "x": 7, "y": 1, "z": 7 },
+      "type": "points",
+      "value": 5
+    },
+    {
+      "position": { "x": 0, "y": 8, "z": 0 },
+      "scale": { "x": 7, "y": 1, "z": 7 },
+      "type": "points",
+      "value": 5
+    },
+    {
+      "position": { "x": 0, "y": 9, "z": 0 },
+      "scale": { "x": 7, "y": 1, "z": 7 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 0, "y": 10, "z": 0 },
+      "scale": { "x": 7, "y": 1, "z": 7 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 0, "y": 11, "z": 0 },
+      "scale": { "x": 7, "y": 1, "z": 7 },
+      "type": "points",
+      "value": 10
+    }
+  ]
+}

@@ -14,15 +14,15 @@ func setup(level_data: Dictionary) -> void:
 	)
 
 
-func _process(delta):
+func _process(_delta):
 	for button in $Control/Toolbar.get_children():
 		if level.selected_tool == button.name:
 			button.set_disabled(true)
 		else:
 			button.set_disabled(false)
 
-	$Control/Toolbar/Tool/Quantity.text = "%s" % level.tool_uses
-	$Control/LevelInfo/Points.text = "%s" % level.points
+	if level.gamemode:
+		level.gamemode.update_gui(self)
 
 
 func _on_Move_pressed() -> void:

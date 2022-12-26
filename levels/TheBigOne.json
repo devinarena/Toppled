@@ -8,27 +8,12 @@
     "three_star": 10,
     "tool": {
       "type": "baseball",
-      "quantity": 3
+      "quantity": 2
     }
   },
   "blocks": [
     {
-      "position": { "x": -1, "y": 2, "z": -1 },
-      "scale": { "x": 1, "y": 4, "z": 1 },
-      "type": "normal"
-    },
-    {
-      "position": { "x": -1, "y": 2, "z": 1 },
-      "scale": { "x": 1, "y": 4, "z": 1 },
-      "type": "normal"
-    },
-    {
-      "position": { "x": 1, "y": 2, "z": -1 },
-      "scale": { "x": 1, "y": 4, "z": 1 },
-      "type": "normal"
-    },
-    {
-      "position": { "x": 1, "y": 2, "z": 1 },
+      "position": { "x": 0, "y": 2, "z": 0 },
       "scale": { "x": 1, "y": 4, "z": 1 },
       "type": "normal"
     },

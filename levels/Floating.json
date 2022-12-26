@@ -1,0 +1,75 @@
+{
+  "name": "Floating",
+  "author": "Devin Arena",
+  "rules": {
+    "type": "points",
+    "one_star": 10,
+    "two_star": 30,
+    "three_star": 50,
+    "tool": {
+      "type": "baseball",
+      "quantity": 5
+    }
+  },
+  "default_zoom": {
+    "y": 12.0,
+    "z": 10.0
+  },
+  "blocks": [
+    {
+      "position": { "x": -2, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 0, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 2, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 4, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": -4, "y": 5, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 4, "y": 6, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 2, "y": 6, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": 0, "y": 6, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -2, "y": 6, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    },
+    {
+      "position": { "x": -4, "y": 6, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "type": "points",
+      "value": 10
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 extends Node
 
-const btnFnt = preload("res://assets/Font20.tres")
+const btnFnt = preload("res://assets/Font32.tres")
 const s_level = "res://scenes/Level.tscn"
 
 func _ready():
@@ -14,9 +14,17 @@ func _ready():
 				continue
 			
 			level = level.split(".")[0]
+			var lname = ""
+			var first = true
+			for c in level:
+				if c == c.to_upper() and not first:
+					lname += " " + c
+				else:
+					lname += c
+				first = false
 
 			var button = Button.new()
-			button.text = level
+			button.text = lname
 			button.connect("pressed", self, "_on_LevelButton_pressed", [level])
 			button.add_font_override("font", btnFnt)
 			$Control/ScrollContainer/VBoxContainer.add_child(button)
