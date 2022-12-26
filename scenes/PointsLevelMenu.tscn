@@ -53,7 +53,7 @@ anchor_bottom = 0.177778
 margin_top = -3.8147e-06
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 7 )
-text = "Toppled"
+text = "Level Name"
 align = 1
 valign = 1
 autowrap = true
@@ -61,6 +61,58 @@ clip_text = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="LevelStats" type="VBoxContainer" parent="Control"]
+anchor_left = 0.125
+anchor_top = 0.533333
+anchor_right = 0.875
+anchor_bottom = 0.866667
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TotalBlocks" type="RichTextLabel" parent="Control/LevelStats"]
+margin_right = 288.0
+margin_bottom = 41.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[img=32x32]res://assets/blocks/normal.png[/img]x30"
+text = "x30"
+fit_content_height = true
+scroll_active = false
+
+[node name="TotalPointBlocks" type="RichTextLabel" parent="Control/LevelStats"]
+margin_top = 45.0
+margin_right = 288.0
+margin_bottom = 86.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[img=32x32]res://assets/blocks/normal.png[/img]x30"
+text = "x30"
+fit_content_height = true
+scroll_active = false
+
+[node name="BlockMass" type="RichTextLabel" parent="Control/LevelStats"]
+margin_top = 90.0
+margin_right = 288.0
+margin_bottom = 131.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[img=32x32]res://assets/blocks/normal.png[/img]x30"
+text = "x30"
+fit_content_height = true
+scroll_active = false
+
+[node name="ToolUses" type="RichTextLabel" parent="Control/LevelStats"]
+margin_top = 135.0
+margin_right = 288.0
+margin_bottom = 176.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[img=32x32]res://assets/blocks/normal.png[/img]x30"
+text = "x30"
+fit_content_height = true
+scroll_active = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 anchor_top = 0.911111

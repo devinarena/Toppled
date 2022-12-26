@@ -68,6 +68,8 @@ func get_dictionary_from_json(level: String) -> Dictionary:
 	else:
 		return res.result
 
+var total_blocks = 0
+var total_mass = 0
 
 func load_blocks(data: Dictionary) -> void:
 	for block in data["blocks"]:
@@ -81,6 +83,12 @@ func load_blocks(data: Dictionary) -> void:
 
 		b.global_transform.origin = Vector3(block.position.x, block.position.y, block.position.z)
 		b.scale(Vector3(block.scale.x, block.scale.y, block.scale.z))
+
+		total_blocks += 1
+		total_mass += b.mass
+
+	print("Total blocks: %s" % total_blocks)
+	print("Total mass: %s" % total_mass)
 
 
 func load_level_data(data: Dictionary) -> void:
