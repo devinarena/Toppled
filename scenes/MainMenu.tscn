@@ -102,11 +102,28 @@ margin_bottom = 38.0
 custom_fonts/font = ExtResource( 8 )
 text = "Points"
 
-[node name="Diamonds" type="Button" parent="Control/VBoxContainer"]
+[node name="DiamondMode" type="Button" parent="Control/VBoxContainer"]
 margin_top = 54.0
 margin_right = 320.0
 margin_bottom = 92.0
 custom_fonts/font = ExtResource( 8 )
 text = "Diamonds"
 
+[node name="MatchMode" type="Button" parent="Control/VBoxContainer"]
+margin_top = 108.0
+margin_right = 320.0
+margin_bottom = 146.0
+custom_fonts/font = ExtResource( 8 )
+text = "Match"
+
+[node name="MatchMode2" type="Button" parent="Control/VBoxContainer"]
+margin_top = 162.0
+margin_right = 320.0
+margin_bottom = 200.0
+custom_fonts/font = ExtResource( 8 )
+text = "Destruction"
+
 [connection signal="pressed" from="Control/VBoxContainer/PointsMode" to="." method="_on_PointsMode_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/DiamondMode" to="." method="_on_Diamonds_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/MatchMode" to="." method="_on_Diamonds_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/MatchMode2" to="." method="_on_Diamonds_pressed"]

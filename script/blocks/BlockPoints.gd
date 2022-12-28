@@ -7,7 +7,8 @@ export(int) var value = 0
 
 
 func _ready() -> void:
-	level = get_tree().root.get_node("Level")
+	if get_tree().root.has_node("Level"):
+		level = get_tree().root.get_node("Level")
 
 	var tex = load("res://assets/blocks/points/%s.png" % value)
 	$PointsMesh.mesh = CubeMesh.new()
@@ -26,7 +27,8 @@ func scale(amt: Vector3) -> void:
 func pop() -> void:
 	call_deferred("free")
 	
-	level.award_points(value)
+	if level:
+		level.award_points(value)
 
 
 func _on_BlockPoints_body_entered(body: Node) -> void:

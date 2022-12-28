@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Font48.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scenes/blocks/BlockImmovable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/blocks/BlockPoints.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/LevelEnvironment.tres" type="Environment" id=5]
 [ext_resource path="res://assets/Theme.tres" type="Theme" id=6]
 [ext_resource path="res://assets/Font32.tres" type="DynamicFont" id=7]
@@ -19,11 +18,10 @@ script = ExtResource( 8 )
 [node name="Ground" parent="Background" instance=ExtResource( 3 )]
 
 [node name="BlockImmovable" parent="Background" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+transform = Transform( 5, 0, 0, 0, 3.53553, -3.53553, 0, 3.53553, 3.53553, 0, 5, 0 )
 
-[node name="BlockPoints" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 4.5, 0 )
-value = 10
+[node name="SpawnPoint" type="Spatial" parent="Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 2 )
 
 [node name="CameraAnchor" type="Spatial" parent="."]
 
@@ -220,6 +218,11 @@ rect_min_size = Vector2( 64, 64 )
 custom_fonts/font = ExtResource( 1 )
 text = ">"
 
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
 [connection signal="pressed" from="Control/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]

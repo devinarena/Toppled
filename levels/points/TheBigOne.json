@@ -1,0 +1,28 @@
+{
+  "id": 2,
+  "name": "The Big One",
+  "author": "Devin Arena",
+  "rules": {
+    "type": "points",
+    "one_star": 10,
+    "two_star": 10,
+    "three_star": 10,
+    "tool": {
+      "type": "baseball",
+      "quantity": 2
+    }
+  },
+  "blocks": [
+    {
+      "position": { "x": 0, "y": 2, "z": 0 },
+      "scale": { "x": 1, "y": 4, "z": 1 },
+      "type": "normal"
+    },
+    {
+      "position": { "x": 0, "y": 5, "z": 0 },
+      "scale": { "x": 3, "y": 3, "z": 3 },
+      "type": "points",
+      "value": 10
+    }
+  ]
+}

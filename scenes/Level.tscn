@@ -125,15 +125,15 @@ custom_fonts/font = ExtResource( 9 )
 align = 1
 valign = 1
 
-[node name="Points" type="Label" parent="GUI/Control/LevelInfo"]
+[node name="Points" type="RichTextLabel" parent="GUI/Control/LevelInfo"]
 margin_top = 36.0
 margin_right = 384.0
-margin_bottom = 68.0
-custom_colors/font_color = Color( 0.972549, 0.843137, 0, 1 )
-custom_fonts/font = ExtResource( 9 )
-text = "0"
-align = 1
-valign = 1
+margin_bottom = 69.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 9 )
+bbcode_enabled = true
+fit_content_height = true
+scroll_active = false
 
 [node name="Scope" type="Sprite" parent="GUI/Control"]
 position = Vector2( -16, -16 )

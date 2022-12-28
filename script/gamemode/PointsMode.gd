@@ -11,7 +11,8 @@ func _init(level: Node, one_star_score: int, two_star_score: int, three_star_sco
 
 func update_gui(gui: Node) -> void:
 	gui.get_node("Control/Toolbar/Tool/Quantity").text = "%s" % self.level.tool_uses
-	gui.get_node("Control/LevelInfo/Points").text = "%s" % self.score
+	gui.get_node("Control/LevelInfo/Points").add_color_override("default_color", Color(0.8, 0.8, 0))
+	gui.get_node("Control/LevelInfo/Points").bbcode_text = "[center]%s[/center]" % self.score
 
 
 func check_win_condition() -> int:

@@ -14,6 +14,8 @@ func serialize() -> Dictionary:
 			block["type"] = "immovable"
 		elif "BlockCracked" in child.name:
 			block["type"] = "cracked"
+		elif "BlockDiamond" in child.name:
+			block["type"] = "diamond"
 		elif "Block" in child.name:
 			block["type"] = "normal"
 		else:

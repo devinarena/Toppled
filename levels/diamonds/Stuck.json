@@ -1,0 +1,48 @@
+{
+  "id": 101,
+  "name": "Stuck",
+  "author": "Devin Arena",
+  "rules": {
+    "type": "diamonds",
+    "one_star": 1,
+    "two_star": 1,
+    "three_star": 1,
+    "tool": { "type": "bowlingball", "quantity": 1 }
+  },
+  "default_zoom": {
+    "y": 10.0,
+    "z": 14.0
+  },
+  "blocks": [
+    {
+      "position": { "x": 0, "y": 4, "z": 3 },
+      "scale": { "x": 5, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 0, "y": 4, "z": -3 },
+      "scale": { "x": 5, "y": 1, "z": 1 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": -3, "y": 4, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 7 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 3, "y": 4, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 7 },
+      "type": "immovable"
+    },
+    {
+      "position": { "x": 0, "y": 5, "z": 0 },
+      "scale": { "x": 7, "y": 1, "z": 7 },
+      "type": "cracked"
+    },
+    {
+      "position": { "x": 0, "y": 8, "z": 0 },
+      "scale": { "x": 5, "y": 5, "z": 5 },
+      "type": "diamond"
+    }
+  ]
+}

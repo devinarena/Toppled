@@ -7,6 +7,7 @@ var block_scenes: Dictionary = {
 	"points": load("res://scenes/blocks/BlockPoints.tscn"),
 	"immovable": load("res://scenes/blocks/BlockImmovable.tscn"),
 	"cracked": load("res://scenes/blocks/BlockCracked.tscn"),
+	"diamond": load("res://scenes/blocks/BlockDiamond.tscn"),
 }
 
 var selected_tool: String = "Move"
@@ -18,7 +19,7 @@ var game_over: bool = false
 
 
 func _ready():
-	var level = load_file("res://levels/%s.json" % Globals.level)
+	var level = load_file("res://levels/%s/%s.json" % [Globals.level_dir, Globals.level])
 	var level_data = get_dictionary_from_json(level)
 	load_blocks(level_data)
 	load_level_data(level_data)
@@ -34,15 +35,15 @@ func _ready():
 		var new_blocks = l.serialize().blocks
 
 		var file = File.new()
-		file.open("res://levels/%s.json" % target, File.READ)
+		file.open("res://levels/diamonds/%s.json" % target, File.READ)
 		var level_str = file.get_as_text()
 		file.close()
 
 		var json = parse_json(level_str)
 		print(json)
 		json.blocks = new_blocks
-		
-		file.open("res://levels/%s.json" % target, File.WRITE)
+
+		file.open("res://levels/diamonds/%s.json" % target, File.WRITE)
 		file.store_string(to_json(json))
 		file.close()
 
@@ -68,9 +69,6 @@ func get_dictionary_from_json(level: String) -> Dictionary:
 	else:
 		return res.result
 
-var total_blocks = 0
-var total_mass = 0
-var total_points = 0
 
 func load_blocks(data: Dictionary) -> void:
 	for block in data["blocks"]:
@@ -85,15 +83,6 @@ func load_blocks(data: Dictionary) -> void:
 		b.global_transform.origin = Vector3(block.position.x, block.position.y, block.position.z)
 		b.scale(Vector3(block.scale.x, block.scale.y, block.scale.z))
 
-		total_blocks += 1
-		total_mass += b.mass
-		total_points += int(b is BlockPoints)
-
-	# Temporary for stats
-	print("Total blocks: %s" % total_blocks)
-	print("Total mass: %s" % total_mass)
-	print("Total points: %s" % total_points)
-
 
 func load_level_data(data: Dictionary) -> void:
 	match data.rules.type:
@@ -101,10 +90,15 @@ func load_level_data(data: Dictionary) -> void:
 			gamemode = load("res://script/gamemode/PointsMode.gd").new(
 				self, data.rules.one_star, data.rules.two_star, data.rules.three_star
 			)
+		"diamonds":
+			gamemode = load("res://script/gamemode/DiamondsMode.gd").new(
+				self, data.rules.one_star, data.rules.two_star, data.rules.three_star
+			)
 	topple_tool = data.rules["tool"].type
 	tool_uses = data.rules["tool"].quantity
 	if "default_zoom" in data:
 		$Player.set_camera_position(data.default_zoom.y, data.default_zoom.z)
+
 
 func award_points(points: int) -> void:
 	gamemode.award_points(points)
@@ -112,7 +106,7 @@ func award_points(points: int) -> void:
 	if game_over:
 		return
 
-	if gamemode.check_win_condition() != -1:
+	if gamemode.check_win_condition() != -1 and $EndTimer.is_stopped():
 		$EndTimer.start(3)
 
 
@@ -124,6 +118,7 @@ func show_popup(title: String, desc: String) -> void:
 
 func get_blocks() -> Array:
 	return $Blocks.get_children()
+
 
 # CALLBACKS
 
@@ -142,6 +137,9 @@ func _on_EndTimer_timeout() -> void:
 	var res = gamemode.check_final_result()
 
 	if res:
+		Globals.save.levels[Globals.level] = res
+		Globals.save_data()
+	
 		for child in $GUI/Control/Dialog/CenterContainer/VBoxContainer/HBoxContainer.get_children():
 			if res > 0:
 				child.texture = star

@@ -1,5 +1,7 @@
 extends "res://script/blocks/Block.gd"
 
+class_name BlockCracked
+
 var dead = false
 
 
