@@ -3,6 +3,7 @@ class_name GameMode
 var mode: String = ""
 var score: int = 0
 var level: Node
+var text_color: Color
 var one_star_score: int = 0
 var two_star_score: int = 0
 var three_star_score: int = 0
@@ -22,6 +23,11 @@ func update_gui(_gui: Node) -> void:
 # returns the number of stars awarded, 0 if lost, -1 if still playing
 func check_win_condition() -> int:
 	return -1
+
+
+# Called when a block hits the ground, special properties can be added here
+func block_hit_ground(block: Block) -> void:
+	pass
 
 
 # returns the number of stars awarded, 0 if lost, -1 if still playing

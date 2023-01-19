@@ -25,12 +25,6 @@ func scale(amt: Vector3) -> void:
 
 
 func pop() -> void:
-	call_deferred("free")
-	
+	.pop()
 	if level:
 		level.award_points(value)
-
-
-func _on_BlockPoints_body_entered(body: Node) -> void:
-	if body.name == "Ground":
-		pop()

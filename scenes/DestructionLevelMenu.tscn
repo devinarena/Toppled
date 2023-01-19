@@ -1,0 +1,293 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/Font48.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/blocks/BlockImmovable.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://script/DestructionLevelMenu.gd" type="Script" id=4]
+[ext_resource path="res://assets/LevelEnvironment.tres" type="Environment" id=5]
+[ext_resource path="res://assets/Theme.tres" type="Theme" id=6]
+[ext_resource path="res://assets/Font32.tres" type="DynamicFont" id=7]
+[ext_resource path="res://scenes/blocks/Block.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/star_outline.png" type="Texture" id=9]
+[ext_resource path="res://assets/star.png" type="Texture" id=10]
+[ext_resource path="res://assets/Font20.tres" type="DynamicFont" id=11]
+
+[node name="GemsLevelMenu" type="Node"]
+script = ExtResource( 4 )
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Ground" parent="Background" instance=ExtResource( 3 )]
+
+[node name="BlockImmovable" parent="Background" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 1, 0 )
+
+[node name="Block" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 3, 2, 2, 0 )
+
+[node name="Block3" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 3, 2, 3, 0 )
+
+[node name="Block4" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 3, 2, 4, 0 )
+
+[node name="Block7" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2 )
+
+[node name="Block8" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -2 )
+
+[node name="Block9" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -2 )
+
+[node name="Block10" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 2 )
+
+[node name="Block11" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 2 )
+
+[node name="Block12" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2 )
+
+[node name="Block2" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 3, -2, 2, 0 )
+
+[node name="Block5" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 3, -2, 3, 0 )
+
+[node name="Block6" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 3, -2, 4, 0 )
+
+[node name="Block13" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 4, 0, 0, 0, 1, -2, 3.5, 2 )
+
+[node name="Block14" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 4, 0, 0, 0, 1, 2, 3.5, 2 )
+
+[node name="Block15" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 4, 0, 0, 0, 1, 2, 3.5, -2 )
+
+[node name="Block16" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 4, 0, 0, 0, 1, -2, 3.5, -2 )
+
+[node name="Block17" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2 )
+
+[node name="Block18" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -2 )
+
+[node name="Block19" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5, 0 )
+
+[node name="Block20" parent="Background" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, 0 )
+
+[node name="CameraAnchor" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="CameraAnchor"]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 8, 13 )
+environment = ExtResource( 5 )
+current = true
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelName" type="Label" parent="Control"]
+anchor_top = 0.0666667
+anchor_right = 1.0
+anchor_bottom = 0.177778
+margin_top = -3.8147e-06
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Level Name"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LevelStats" type="VBoxContainer" parent="Control"]
+anchor_left = 0.125
+anchor_top = 0.6
+anchor_right = 0.875
+anchor_bottom = 0.844444
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HighScore" type="RichTextLabel" parent="Control/LevelStats"]
+margin_right = 288.0
+margin_bottom = 21.0
+custom_fonts/normal_font = ExtResource( 11 )
+bbcode_enabled = true
+bbcode_text = "dwasd"
+text = "dwasd"
+fit_content_height = true
+scroll_active = false
+
+[node name="TotalBlocks" type="RichTextLabel" parent="Control/LevelStats"]
+margin_top = 25.0
+margin_right = 288.0
+margin_bottom = 66.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[img=32x32]res://assets/blocks/normal.png[/img]x30"
+text = "x30"
+fit_content_height = true
+scroll_active = false
+
+[node name="TotalPointBlocks" type="RichTextLabel" parent="Control/LevelStats"]
+margin_top = 70.0
+margin_right = 288.0
+margin_bottom = 111.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[img=32x32]res://assets/blocks/normal.png[/img]x30"
+text = "x30"
+fit_content_height = true
+scroll_active = false
+
+[node name="BlockMass" type="RichTextLabel" parent="Control/LevelStats"]
+margin_top = 115.0
+margin_right = 288.0
+margin_bottom = 156.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[img=32x32]res://assets/blocks/normal.png[/img]x30"
+text = "x30"
+fit_content_height = true
+scroll_active = false
+
+[node name="ToolUses" type="RichTextLabel" parent="Control/LevelStats"]
+margin_top = 160.0
+margin_right = 288.0
+margin_bottom = 201.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[img=32x32]res://assets/blocks/normal.png[/img]x30"
+text = "x30"
+fit_content_height = true
+scroll_active = false
+
+[node name="StarContainer" type="HBoxContainer" parent="Control"]
+anchor_left = 0.125
+anchor_top = 0.488889
+anchor_right = 0.875
+anchor_bottom = 0.577778
+margin_bottom = -3.05176e-05
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Star1Empty" type="TextureRect" parent="Control/StarContainer"]
+margin_right = 44.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="Star1Filled" type="TextureRect" parent="Control/StarContainer"]
+margin_left = 48.0
+margin_right = 93.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="Star2Empty" type="TextureRect" parent="Control/StarContainer"]
+margin_left = 97.0
+margin_right = 142.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="Star2Filled" type="TextureRect" parent="Control/StarContainer"]
+margin_left = 146.0
+margin_right = 190.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="Star3Empty" type="TextureRect" parent="Control/StarContainer"]
+margin_left = 194.0
+margin_right = 239.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="Star3Filled" type="TextureRect" parent="Control/StarContainer"]
+margin_left = 243.0
+margin_right = 288.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+anchor_top = 0.911111
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 16
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BackButton" type="Button" parent="Control/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+custom_fonts/font = ExtResource( 1 )
+text = "<"
+
+[node name="PlayButton" type="Button" parent="Control/HBoxContainer"]
+margin_left = 80.0
+margin_right = 304.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 7 )
+text = "Play"
+
+[node name="NextButton" type="Button" parent="Control/HBoxContainer"]
+margin_left = 320.0
+margin_right = 384.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+custom_fonts/font = ExtResource( 1 )
+text = ">"
+
+[connection signal="pressed" from="Control/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/NextButton" to="." method="_on_NextButton_pressed"]

@@ -3,6 +3,8 @@ extends Node
 const point_block = preload("res://scenes/blocks/BlockPoints.tscn")
 const s_level = "res://scenes/Level.tscn"
 
+var level_dir: String = "points"
+
 var level_idx: int = 0
 var timer: float = 0.0
 
@@ -12,7 +14,7 @@ var level_stats = {}
 
 func load_levels() -> void:
 	var dir = Directory.new()
-	if dir.open("res://levels/points") == OK:
+	if dir.open("res://levels/%s" % level_dir) == OK:
 		dir.list_dir_begin()
 		var level = dir.get_next()
 		while level:
@@ -31,7 +33,7 @@ func load_levels() -> void:
 				first = false
 
 			var file = File.new()
-			var path = "res://levels/points/%s.json" % level
+			var path = "res://levels/%s/%s.json" % [level_dir, level]
 			if file.open(path, File.READ) == OK:
 				var data = parse_json(file.get_as_text())
 				file.close()
@@ -46,6 +48,9 @@ func load_levels() -> void:
 						"type": "none",
 						"quantity": 0,
 					},
+					"one_star": data.rules.one_star,
+					"two_star": data.rules.two_star,
+					"three_star": data.rules.three_star,
 				}
 
 				for block in data.blocks:
@@ -73,6 +78,10 @@ func setup_gui() -> void:
 
 	var stats = level_stats[level]
 
+	var score = Globals.save.levels[stats.level] if stats.level in Globals.save.levels else 0
+
+	$Control/LevelStats/HighScore.bbcode_text = ("[center]Best: %s[/center]" % [score])
+
 	$Control/LevelStats/TotalBlocks.bbcode_text = (
 		"[img=32x32]res://assets/blocks/normal.png[/img]x%s blocks"
 		% stats.total_blocks
@@ -90,7 +99,14 @@ func setup_gui() -> void:
 		% [Tools.TOOLS[stats["tool"].type].icon, stats["tool"].quantity]
 	)
 
-	var stars = Globals.save.levels[stats.level] if stats.level in Globals.save.levels else 0
+	var stars = 0
+	if score >= level_stats[level].one_star:
+		stars += 1
+	if score >= level_stats[level].two_star:
+		stars += 1
+	if score >= level_stats[level].three_star:
+		stars += 1
+
 	for i in range(stars):
 		$Control/StarContainer.get_node("Star%sEmpty" % (i + 1)).hide()
 		$Control/StarContainer.get_node("Star%sFilled" % (i + 1)).show()
@@ -100,6 +116,10 @@ func setup_gui() -> void:
 
 
 func _ready():
+	$Control/LevelStats/HighScore.add_color_override(
+		"default_color", Globals.level_type_data.points.text_color
+	)
+
 	load_levels()
 	setup_gui()
 
@@ -127,7 +147,7 @@ func _on_NextButton_pressed() -> void:
 
 func _on_PlayButton_pressed() -> void:
 	Globals.level = level_stats[level_list[level_idx]].level
-	Globals.level_dir = "points"
+	Globals.level_dir = level_dir
 	get_tree().change_scene(s_level)
 	print("Loading level: " + Globals.level)
 
@@ -135,6 +155,8 @@ func _on_PlayButton_pressed() -> void:
 func _on_SpawnTimer_timeout() -> void:
 	var b = point_block.instance()
 	b.global_transform.origin = $Background/SpawnPoint.global_transform.origin
-	b.apply_impulse(Vector3(randf() - randf(), randf() - randf(), randf() - randf()), Vector3(0.5, 2, 0.5))
+	b.apply_impulse(
+		Vector3(randf() - randf(), randf() - randf(), randf() - randf()), Vector3(0.5, 2, 0.5)
+	)
 	b.value = 10 if randi() % 2 == 0 else 5
 	$Background.add_child(b)

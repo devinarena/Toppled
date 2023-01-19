@@ -15,8 +15,6 @@ material = SubResource( 1 )
 size = Vector3( 1, 1, 1 )
 
 [node name="BlockDiamond" instance=ExtResource( 1 )]
-contacts_reported = 999
-contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="Mesh" parent="." index="0"]

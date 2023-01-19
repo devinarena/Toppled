@@ -1,111 +1,118 @@
 {
-	"id": 0,
-	"name": "Tower",
-	"author": "Devin Arena",
-	"rules": {
-		"type": "points",
-		"one_star": 10,
-		"two_star": 20,
-		"three_star": 30,
-		"tool": {
-			"type": "baseball",
-			"quantity": 2
-		}
-	},
-	"blocks": [
-		{
-			"type": "normal",
-			"position": {
-				"x": 0,
-				"y": 1,
-				"z": 0
-			},
-			"scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			}
-		},
-		{
-			"type": "normal",
-			"position": {
-				"x": 0,
-				"y": 2,
-				"z": 0
-			},
-			"scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			}
-		},
-		{
-			"type": "normal",
-			"position": {
-				"x": 0,
-				"y": 3,
-				"z": 0
-			},
-			"scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			}
-		},
-		{
-			"type": "normal",
-			"position": {
-				"x": 0,
-				"y": 4,
-				"z": 0
-			},
-			"scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			}
-		},
-		{
-			"type": "points",
-			"value": 10,
-			"position": {
-				"x": 0,
-				"y": 5,
-				"z": 0
-			},
-			"scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			}
-		},
-		{
-			"type": "points",
-			"value": 10,
-			"position": {
-				"x": 0,
-				"y": 6,
-				"z": 0
-			},
-			"scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			}
-		},
-		{
-			"type": "points",
-			"value": 10,
-			"position": {
-				"x": 0,
-				"y": 7,
-				"z": 0
-			},
-			"scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			}
-		}
-	]
+  "id": 0,
+  "name": "Tower",
+  "author": "Devin Arena",
+  "rules": {
+    "type": "points",
+    "one_star": 10,
+    "two_star": 20,
+    "three_star": 30,
+    "tool": {
+      "type": "baseball",
+      "quantity": 2
+    }
+  },
+  "blocks": [
+    {
+      "type": "normal",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "type": "normal",
+      "position": {
+        "x": 0,
+        "y": 2,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "type": "normal",
+      "position": {
+        "x": 0,
+        "y": 3,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "type": "normal",
+      "position": {
+        "x": 0,
+        "y": 4,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "type": "points",
+      "value": 10,
+      "position": {
+        "x": 0,
+        "y": 5,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "type": "points",
+      "value": 10,
+      "position": {
+        "x": 0,
+        "y": 6,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "type": "points",
+      "value": 10,
+      "position": {
+        "x": 0,
+        "y": 7,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    }
+  ]
 }

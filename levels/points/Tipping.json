@@ -1,154 +1,178 @@
 {
-  "id": 9,
   "author": "Devin Arena",
-  "name": "Tipping",
-  "rules": {
-    "type": "points",
-    "one_star": 10,
-    "two_star": 10,
-    "three_star": 10,
-    "tool": { "type": "baseball", "quantity": 1 }
-  },
-  "default_zoom": {
-	"y": 14.0,
-	"z": 14.0
-  },
   "blocks": [
     {
       "position": { "x": 0, "y": 1, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": -1, "y": 2, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": -1, "y": 3, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 2, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 1, "y": 2, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 1, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 1, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 4, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": -1, "y": 5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 1, "y": 5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 4, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 4, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 6, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": -1, "y": 7, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 7, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 1, "y": 7, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 6, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 6, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 8, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": -1, "y": 9, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 9, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 1, "y": 9, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 3 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 8, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": 0, "y": 8, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 1 },
       "type": "normal"
     },
     {
       "position": { "x": 1, "y": 3, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 3 },
       "type": "cracked"
     },
     {
       "position": { "x": 0, "y": 12, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 5, "y": 5, "z": 5 },
       "type": "points",
       "value": 10
     }
-  ]
+  ],
+  "default_zoom": { "y": 14, "z": 14 },
+  "id": 9,
+  "name": "Tipping",
+  "rules": {
+    "one_star": 10,
+    "three_star": 10,
+    "tool": { "quantity": 1, "type": "baseball" },
+    "two_star": 10,
+    "type": "points"
+  }
 }

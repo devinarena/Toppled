@@ -11,12 +11,6 @@ func _ready() -> void:
 
 
 func pop() -> void:
-	call_deferred("free")
-
+	.pop()
 	if level:
 		level.award_points(1)
-
-
-func _on_BlockDiamond_body_entered(body: Node) -> void:
-	if body.name == "Ground":
-		pop()

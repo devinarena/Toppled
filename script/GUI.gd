@@ -33,3 +33,8 @@ func _on_Move_pressed() -> void:
 func _on_Tool_pressed() -> void:
 	level.selected_tool = "Tool"
 	$Control/Scope.position = Vector2(-16, -16)
+
+
+func _on_Rotate_pressed() -> void:
+	level.selected_tool = "Rotate"
+	$Control/Scope.position = Vector2(-16, -16)

@@ -13,13 +13,9 @@ material = SubResource( 3 )
 size = Vector3( 1, 1, 1 )
 
 [node name="BlockPoints" instance=ExtResource( 1 )]
-contacts_reported = 999
-contact_monitor = true
 script = ExtResource( 2 )
 
 [node name="Mesh" parent="." index="0"]
 mesh = SubResource( 4 )
 
 [node name="PointsMesh" type="MeshInstance" parent="." index="2"]
-
-[connection signal="body_entered" from="." to="." method="_on_BlockPoints_body_entered"]

@@ -25,9 +25,19 @@ _global_script_classes=[ {
 "path": "res://script/blocks/BlockDiamond.gd"
 }, {
 "base": "RigidBody",
+"class": "BlockImmovable",
+"language": "GDScript",
+"path": "res://script/blocks/BlockImmovable.gd"
+}, {
+"base": "RigidBody",
 "class": "BlockPoints",
 "language": "GDScript",
 "path": "res://script/blocks/BlockPoints.gd"
+}, {
+"base": "Reference",
+"class": "DestructionMode",
+"language": "GDScript",
+"path": "res://script/gamemode/DestructionMode.gd"
 }, {
 "base": "Reference",
 "class": "DiamondsMode",
@@ -53,7 +63,9 @@ _global_script_class_icons={
 "Block": "",
 "BlockCracked": "",
 "BlockDiamond": "",
+"BlockImmovable": "",
 "BlockPoints": "",
+"DestructionMode": "",
 "DiamondsMode": "",
 "GameMode": "",
 "PointsMode": "",
@@ -71,6 +83,7 @@ config/icon="res://icon.png"
 Swipe="*res://script/Swipe.gd"
 Tools="*res://script/Tools.gd"
 Globals="*res://script/Globals.gd"
+Debug="*res://scenes/Debug.tscn"
 
 [display]
 

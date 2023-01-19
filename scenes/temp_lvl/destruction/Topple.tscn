@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/blocks/Block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/blocks/BlockImmovable.tscn" type="PackedScene" id=2]
+[ext_resource path="res://script/LevelGenerator.gd" type="Script" id=3]
+
+[node name="LevelGenerator" type="Node"]
+script = ExtResource( 3 )
+
+[node name="BlockImmovable" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="Block" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 4, 0 )
+
+[node name="Block2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 )
+
+[node name="Block11" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0 )
+
+[node name="Block3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0 )
+
+[node name="Block4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 1 )
+
+[node name="Block5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 1 )
+
+[node name="Block6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 1 )
+
+[node name="Block7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 0 )
+
+[node name="Block8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -1 )
+
+[node name="Block9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -1 )
+
+[node name="Block10" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -1 )

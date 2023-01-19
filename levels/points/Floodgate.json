@@ -20,61 +20,72 @@
     {
       "position": { "x": 4, "y": 4, "z": -4 },
       "scale": { "x": 1, "y": 1, "z": 1 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "immovable"
     },
     {
       "position": { "x": -4, "y": 4, "z": -4 },
       "scale": { "x": 1, "y": 1, "z": 1 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "immovable"
     },
     {
       "position": { "x": 4, "y": 4, "z": 4 },
       "scale": { "x": 1, "y": 1, "z": 1 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "immovable"
     },
     {
       "position": { "x": -4, "y": 4, "z": 4 },
       "scale": { "x": 1, "y": 1, "z": 1 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "immovable"
     },
     {
       "position": { "x": 0, "y": 5, "z": 0 },
       "scale": { "x": 9, "y": 1, "z": 9 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "cracked"
     },
     {
       "position": { "x": 0, "y": 6, "z": 0 },
       "scale": { "x": 7, "y": 1, "z": 7 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "points",
       "value": 5
     },
     {
       "position": { "x": 0, "y": 7, "z": 0 },
       "scale": { "x": 7, "y": 1, "z": 7 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "points",
       "value": 5
     },
     {
       "position": { "x": 0, "y": 8, "z": 0 },
       "scale": { "x": 7, "y": 1, "z": 7 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "points",
       "value": 5
     },
     {
       "position": { "x": 0, "y": 9, "z": 0 },
       "scale": { "x": 7, "y": 1, "z": 7 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "points",
       "value": 10
     },
     {
       "position": { "x": 0, "y": 10, "z": 0 },
       "scale": { "x": 7, "y": 1, "z": 7 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "points",
       "value": 10
     },
     {
       "position": { "x": 0, "y": 11, "z": 0 },
       "scale": { "x": 7, "y": 1, "z": 7 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
       "type": "points",
       "value": 10
     }

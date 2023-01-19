@@ -1,7 +1,7 @@
 extends "res://script/ToppleTool.gd"
 
-const EXPLOSION_RADIUS: float = 96.0
-const EXPLOSION_FORCE: float = 0.00055
+const EXPLOSION_RADIUS: float = 18.0
+const EXPLOSION_FORCE: float = 0.35
 
 
 func explode() -> void:
@@ -11,16 +11,16 @@ func explode() -> void:
 	for block in blocks:
 		var distance = block.global_transform.origin.distance_squared_to(global_transform.origin)
 		if distance < EXPLOSION_RADIUS * EXPLOSION_RADIUS:
-			var force = EXPLOSION_RADIUS * EXPLOSION_RADIUS - distance
+			var force = (EXPLOSION_RADIUS * EXPLOSION_RADIUS) / distance
 			var dir = (block.global_transform.origin - global_transform.origin).normalized()
 
 			block.apply_impulse(
 				Vector3(
-					(1 * randf() - 0.5) * block.scale.x,
-					(1 * randf() - 0.5) * block.scale.y,
-					(1 * randf() - 0.5) * block.scale.z
+					(randi() % 2) * 2 - 1 - (randf() * 0.4 + 0.1),
+					(randi() % 2) * 2 - 1 - (randf() * 0.4 + 0.1),
+					(randi() % 2) * 2 - 1 - (randf() * 0.4 + 0.1)
 				),
-				dir * max(force * EXPLOSION_FORCE, 3.0)
+				dir * force * EXPLOSION_FORCE * pow(block.mass, 0.65)
 			)
 
 			block.explode()

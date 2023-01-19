@@ -1,15 +1,16 @@
-extends Node
+extends "res://script/LevelMenu.gd"
 
-const initial_index = 100
+const initial_index = 1000
 
-const point_block = preload("res://scenes/blocks/BlockDiamond.tscn")
-const s_level = "res://scenes/Level.tscn"
+const diamond_block = preload("res://scenes/blocks/BlockDiamond.tscn")
 
-var level_idx: int = 0
-var timer: float = 0.0
 
-var level_list: Array = []
-var level_stats = {}
+func _ready():
+	level_dir = "diamonds"
+
+	$Control/LevelStats/HighScore.add_color_override(
+		"default_color", Globals.level_type_data.diamonds.text_color
+	)
 
 
 func load_levels() -> void:
@@ -48,6 +49,9 @@ func load_levels() -> void:
 						"type": "none",
 						"quantity": 0,
 					},
+					"one_star": data.rules.one_star,
+					"two_star": data.rules.two_star,
+					"three_star": data.rules.three_star,
 				}
 
 				for block in data.blocks:
@@ -75,6 +79,13 @@ func setup_gui() -> void:
 
 	var stats = level_stats[level]
 
+	var score = Globals.save.levels[stats.level] if stats.level in Globals.save.levels else 0
+
+	$Control/LevelStats/HighScore.bbcode_text = (
+		"[center]Best: [img=16]res://assets/diamond_icon.png[/img]%s/[img=16]res://assets/diamond_icon.png[/img]%s[/center]"
+		% [score, stats.diamond_blocks]
+	)
+
 	$Control/LevelStats/TotalBlocks.bbcode_text = (
 		"[img=32x32]res://assets/blocks/normal.png[/img]x%s blocks"
 		% stats.total_blocks
@@ -92,7 +103,14 @@ func setup_gui() -> void:
 		% [Tools.TOOLS[stats["tool"].type].icon, stats["tool"].quantity]
 	)
 
-	var stars = Globals.save.levels[stats.level] if stats.level in Globals.save.levels else 0
+	var stars = 0
+	if score >= level_stats[level].one_star:
+		stars += 1
+	if score >= level_stats[level].two_star:
+		stars += 1
+	if score >= level_stats[level].three_star:
+		stars += 1
+
 	for i in range(stars):
 		$Control/StarContainer.get_node("Star%sEmpty" % (i + 1)).hide()
 		$Control/StarContainer.get_node("Star%sFilled" % (i + 1)).show()
@@ -101,41 +119,10 @@ func setup_gui() -> void:
 		$Control/StarContainer.get_node("Star%sEmpty" % (i + 1)).show()
 
 
-func _ready():
-	load_levels()
-	setup_gui()
-
-
-func _process(delta):
-	$CameraAnchor.rotate_y(delta * 0.1)
-
-
-func _on_BackButton_pressed() -> void:
-	if level_idx == 0:
-		get_tree().change_scene("res://scenes/MainMenu.tscn")
-		return
-
-	level_idx -= 1
-	setup_gui()
-
-
-func _on_NextButton_pressed() -> void:
-	if level_idx == level_list.size() - 1:
-		return
-
-	level_idx += 1
-	setup_gui()
-
-
-func _on_PlayButton_pressed() -> void:
-	Globals.level = level_stats[level_list[level_idx]].level
-	Globals.level_dir = "diamonds"
-	get_tree().change_scene(s_level)
-	print("Loading level: " + Globals.level)
-
-
 func _on_SpawnTimer_timeout() -> void:
-	var b = point_block.instance()
+	var b = diamond_block.instance()
 	b.global_transform.origin = $Background/SpawnPoint.global_transform.origin
-	b.apply_impulse(Vector3(randf() - randf(), randf() - randf(), randf() - randf()), Vector3(0.5, 2, 0.5))
+	b.apply_impulse(
+		Vector3(randf() - randf(), randf() - randf(), randf() - randf()), Vector3(0.5, 2, 0.5)
+	)
 	$Background.add_child(b)

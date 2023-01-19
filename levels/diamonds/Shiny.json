@@ -1,159 +1,188 @@
 {
-  "id": 100,
   "author": "Devin Arena",
-  "name": "Shiny",
-  "rules": {
-    "type": "diamonds",
-    "one_star": 9,
-    "two_star": 18,
-    "three_star": 27,
-    "tool": { "type": "baseball", "quantity": 4 }
-  },
   "blocks": [
     {
       "position": { "x": 0, "y": 2.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 3, "z": 1 },
       "type": "immovable"
     },
     {
       "position": { "x": 0, "y": 4.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 3, "y": 1, "z": 3 },
       "type": "immovable"
     },
     {
       "position": { "x": 0, "y": 5.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 5.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 5.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 5.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 0, "y": 5.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 5.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 5.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 0, "y": 5.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 5.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 0, "y": 6.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 6.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 6.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 6.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 0, "y": 6.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 6.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 6.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 0, "y": 6.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 6.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 0, "y": 7.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 7.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 7.5, "z": 0 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 7.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 0, "y": 7.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 7.5, "z": 1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 1, "y": 7.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": 0, "y": 7.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     },
     {
       "position": { "x": -1, "y": 7.5, "z": -1 },
+      "rotation": { "x": -0, "y": 0, "z": 0 },
       "scale": { "x": 1, "y": 1, "z": 1 },
       "type": "diamond"
     }
-  ]
+  ],
+  "id": 1000,
+  "name": "Shiny",
+  "rules": {
+    "one_star": 9,
+    "three_star": 27,
+    "tool": { "quantity": 4, "type": "baseball" },
+    "two_star": 18,
+    "type": "diamonds"
+  }
 }

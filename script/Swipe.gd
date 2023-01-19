@@ -1,7 +1,7 @@
 extends Node
 
 signal swipe
-const STRENGTH: float =  0.005
+const STRENGTH: float =  0.006
 var swipe_start: float = 0.0
 var start_time: float = 0.0
 
