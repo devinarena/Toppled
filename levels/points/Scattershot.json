@@ -260,7 +260,6 @@
       "value": 10
     }
   ],
-  "default_zoom": { "y": 16, "z": 14 },
   "id": 8,
   "name": "Scattershot",
   "rules": {

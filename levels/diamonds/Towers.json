@@ -146,7 +146,6 @@
       "type": "diamond"
     }
   ],
-  "default_zoom": { "y": 10, "z": 12 },
   "id": 1002,
   "name": "Towers",
   "rules": {

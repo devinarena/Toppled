@@ -52,3 +52,10 @@ func get_mode() -> String:
 
 func get_score() -> int:
 	return score
+
+
+func reset_end_timer() -> void:
+	var timer = level.get_node("EndTimer")
+	if not timer.is_stopped():
+		timer.stop()
+		timer.start()

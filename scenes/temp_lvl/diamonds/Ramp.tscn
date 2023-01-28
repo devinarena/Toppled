@@ -1,0 +1,115 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://script/LevelGenerator.gd" type="Script" id=1]
+[ext_resource path="res://scenes/blocks/BlockCracked.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/blocks/BlockImmovable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/blocks/Block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/blocks/BlockDiamond.tscn" type="PackedScene" id=5]
+
+[node name="LevelGenerator" type="Node"]
+script = ExtResource( 1 )
+
+[node name="BlockImmovable" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 12, 2 )
+
+[node name="BlockImmovable2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 12, 6 )
+
+[node name="BlockImmovable3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 12, 2 )
+
+[node name="BlockImmovable4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 12, 6 )
+
+[node name="BlockCracked" parent="." instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, -5, 13, 4 )
+
+[node name="BlockImmovable5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 5, -7, 4.5, 4 )
+
+[node name="BlockCracked2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 5, 7, 4.5, 4 )
+
+[node name="Block" parent="." instance=ExtResource( 4 )]
+transform = Transform( 15, 0, 0, 0, 1, 0, 0, 0, 5, 0, 9, 4 )
+
+[node name="BlockDiamond" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 14, 4 )
+
+[node name="BlockDiamond2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 14, 4 )
+
+[node name="BlockDiamond3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 14, 4 )
+
+[node name="BlockDiamond4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 14, 5 )
+
+[node name="BlockDiamond5" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 14, 5 )
+
+[node name="BlockDiamond6" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 14, 5 )
+
+[node name="BlockDiamond7" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 14, 3 )
+
+[node name="BlockDiamond8" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 14, 3 )
+
+[node name="BlockDiamond9" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 14, 3 )
+
+[node name="BlockDiamond10" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 15, 4 )
+
+[node name="BlockDiamond11" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 15, 4 )
+
+[node name="BlockDiamond12" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 15, 4 )
+
+[node name="BlockDiamond13" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 15, 5 )
+
+[node name="BlockDiamond14" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 15, 5 )
+
+[node name="BlockDiamond15" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 15, 5 )
+
+[node name="BlockDiamond16" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 15, 3 )
+
+[node name="BlockDiamond17" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 15, 3 )
+
+[node name="BlockDiamond18" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 15, 3 )
+
+[node name="BlockDiamond19" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 16, 4 )
+
+[node name="BlockDiamond20" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 16, 4 )
+
+[node name="BlockDiamond21" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 16, 4 )
+
+[node name="BlockDiamond22" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 16, 5 )
+
+[node name="BlockDiamond23" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 16, 5 )
+
+[node name="BlockDiamond24" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 16, 5 )
+
+[node name="BlockDiamond25" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 16, 3 )
+
+[node name="BlockDiamond26" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 16, 3 )
+
+[node name="BlockDiamond27" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 16, 3 )

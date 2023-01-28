@@ -12,10 +12,6 @@
       "quantity": 5
     }
   },
-  "default_zoom": {
-    "y": 12.0,
-    "z": 10.0
-  },
   "blocks": [
     {
       "position": { "x": -2, "y": 5, "z": 0 },

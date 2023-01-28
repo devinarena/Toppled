@@ -56,3 +56,5 @@ func _on_block_pop(block: Block) -> void:
 func block_hit_ground(block: Block) -> void:
 	if not block is BlockImmovable:
 		block.pop()
+
+		reset_end_timer()

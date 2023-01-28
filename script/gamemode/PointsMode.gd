@@ -39,3 +39,5 @@ func check_win_condition() -> int:
 func block_hit_ground(block: Block) -> void:
 	if block is BlockPoints:
 		block.pop()
+
+		reset_end_timer()

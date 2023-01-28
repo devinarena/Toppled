@@ -2,6 +2,10 @@ extends Spatial
 
 var original_zoom
 
+const ABS_MIN_ZOOM = 0.25
+const ABS_MAX_ZOOM = 50.0
+const ABS_MAX_DISTANCE = 50.0
+
 var MIN_ZOOM = 5.0
 var MAX_ZOOM = 10.0
 var MAX_DISTANCE = 20.0
@@ -31,9 +35,9 @@ func set_zoom(zoom_level: float):
 	$Camera.global_transform.origin.z = zoom_level / factor
 	$Camera.global_transform.origin.y = zoom_level / factor
 
-	MAX_ZOOM = zoom_level * 2
-	MIN_ZOOM = zoom_level * 0.75
-	MAX_DISTANCE = zoom_level * 2
+	MAX_ZOOM = min(ABS_MAX_ZOOM, zoom_level * 2)
+	MIN_ZOOM = max(ABS_MIN_ZOOM, zoom_level * 0.75)
+	MAX_DISTANCE = min(ABS_MAX_DISTANCE, zoom_level * 2)
 
 
 func throw_tool(strength: float) -> void:

@@ -1,0 +1,16 @@
+{
+  "id": 0,
+  "name": "",
+  "author": "Devin Arena",
+  "rules": {
+    "type": "points",
+    "one_star": 0,
+    "two_star": 0,
+    "three_star": 0,
+    "tool": {
+      "type": "baseball",
+      "quantity": 1
+    }
+  },
+  "blocks": []
+}

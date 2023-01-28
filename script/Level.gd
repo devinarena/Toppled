@@ -49,7 +49,7 @@ func _ready():
 
 		l.queue_free()
 
-	$Player.set_zoom(farthest * 1.5)
+	$Player.set_zoom(farthest * 1.25)
 	get_tree().paused = true
 	show_popup("%s" % Globals.level, Globals.level_type_data[level_data.rules.type].description, 0)
 
@@ -88,7 +88,7 @@ func load_blocks(data: Dictionary) -> void:
 		b.scale(Vector3(block.scale.x, block.scale.y, block.scale.z))
 		b.rotation_degrees = Vector3(block.rotation.x, block.rotation.y, block.rotation.z)
 
-		farthest = max(farthest, b.global_transform.origin.distance_to(Vector3.ZERO))
+		farthest = max(farthest, b.global_transform.origin.distance_to(Vector3.ZERO) + b.get_node("Mesh").mesh.size.length())
 
 
 func load_level_data(data: Dictionary) -> void:

@@ -128,7 +128,6 @@
       "type": "normal"
     }
   ],
-  "default_zoom": { "y": 8, "z": 10 },
   "id": 2001,
   "name": "Breakdown",
   "rules": {
